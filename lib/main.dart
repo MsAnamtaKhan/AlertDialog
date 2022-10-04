@@ -53,6 +53,11 @@ showAlertDialog(BuildContext context)
   Widget okButton=ElevatedButton(onPressed: (){Navigator.of(context).pop();}, child: Text('Ok'));
   AlertDialog response=AlertDialog(title: Text('Send Blood Request'),
   content: Text('Your Blood Request has been Sent Successfully'),
+  gradient: LinearGradient(
+          colors: [Colors.purpleAccent, Colors.blue],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+  ),
   actions: [okButton],);
   showDialog(context: context, builder: (BuildContext context){
     return response;
